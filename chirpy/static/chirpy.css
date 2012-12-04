@@ -1,0 +1,11 @@
+/* Create a chirps form */
+
+/*List of Chirps */
+
+#wrapper{
+    width:970px;
+    margin:0 auto;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+}
