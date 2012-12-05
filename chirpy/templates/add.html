@@ -1,12 +1,16 @@
-<link rel="stylesheet" type="text/css" href="../static/chirpy.css">
-
-<div id="container">
-	<p>Submit A Chirp</p>
-	<form action="">
-		<textarea rows="1" cols="26" name="submit"></textarea><br />
-		<button>Chirp</button>
-		<button>Clear</button>
-		<div id="char_limit"></div>
-	</form>
-
-</div>
+{% extends "base.html" %}
+{% block title %}Chirpy{% endblock %}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{% block content %}
+    <div id="container">
+    	<p>Submit A Chirp</p>
+    	<form action="">
+    		<textarea rows="1" cols="26" name="submit"></textarea><br />
+    		<button>Chirp</button>
+    		<button>Clear</button>
+    		<div id="char_limit"></div>
+    	</form>
+    </div>
+{% endblock %}
