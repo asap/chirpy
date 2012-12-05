@@ -10,8 +10,8 @@ from . import app
 from flask import render_template
 
 chirps = [
-    # {'name': 'stark', 'chirp':'Winter is Coming'},
-    # {'name': 'fury', 'chirp':'...'},
+    {'name': 'stark', 'chirp':'Winter is Coming'},
+    {'name': 'fury', 'chirp':'...'},
 ]
 
 
