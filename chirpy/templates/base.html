@@ -10,12 +10,16 @@
 </head>
 
 {% block body_content %}
-    <nav>
-        <ul class="nav nav-tabs">
-            <li><a href="{{ url_for('index')}}">da chirps</a></li>
-            <li><a href="{{ url_for('add')}}">chirp chirp</a></li>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <a class="brand" href="#">Chirpy</a>
+        <ul class="nav">
+          <li><a href="{{ url_for('index')}}">da chirps</a></li>
+          <li><a href="{{ url_for('add')}}">chirp chirp</a></li>
         </ul>
-    </nav>
+      </div>
+    </div>
+
     <div id="content">{% block content %}{% endblock %}</div>
     <div id="footer">
         {% block footer %}
