@@ -1,11 +1,16 @@
 /* Create a chirps form */
 
 #container{
-	width:580px;
 	margin:0 auto;
 	padding:20px;
 	border:1px;
 	position:relative;
+	border:1px solid #000;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	width:350px;
+	top:150px;
 }
 
 textarea{
