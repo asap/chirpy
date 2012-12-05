@@ -6,6 +6,7 @@ Chirpy
 """
 
 from flask import Flask
+from flask.ext.bootstrap import Bootstrap
 from config import Config
 
 
@@ -14,7 +15,7 @@ app = Flask(__name__)
 # load the default config object. The object is configured to load default or
 # load os.environ.get()
 app.config.from_object(Config)
-
+Bootstrap(app)
 
 # this try block allows local development settings to be set
 try:

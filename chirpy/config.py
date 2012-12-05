@@ -15,10 +15,12 @@ class Config(object):
     """
 
     #: Always False
-    DEBUG = False
+    DEBUG = True
 
     #: Testing setting
     TESTING = environ.get('TESTING', False)
 
     #: csrf setting.
     CSRF_ENABLED = False
+
+    USE_RELOADER = True

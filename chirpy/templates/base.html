@@ -1,18 +1,17 @@
-<html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Chirpy</title>
-    <link rel="stylesheet" type="text/css" href="chirpy.css">
+    {% block head %}
+    <link rel="stylesheet" href="chirpy.css" />
+    <title>{% block title %}{% endblock %} - My Webpage</title>
+    {% endblock %}
 </head>
 <body>
-    <div id="wrapper">
-        <h1>Da Chirps</h1>
-        <h2>Lastest Chirps</h2>
-        <ul>
-            <li>@stark - Winter is coming</li>
-            <li>@parker - Thwip</li>
-            <li>@fury - ...</li>
-            <li>@tstark - @stark Ever heard of space heaters?</li>
-        </ul>
+    <div id="content">{% block content %}{% endblock %}</div>
+    <div id="footer">
+        {% block footer %}
+        &copy; Copyright 2012 by <a href="http://pic.twitter.com/ZpvapDAB">The Data Nerds</a>.
+        {% endblock %}
     </div>
 </body>
-</html>
