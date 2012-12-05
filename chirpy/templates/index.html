@@ -10,11 +10,14 @@
     <div id="wrapper">
         <h1>Da Chirps</h1>
         <h2>Lastest Chirps</h2>
+        {% if chirps %}
         <ul>
-            <li>@stark - Winter is coming</li>
-            <li>@parker - Thwip</li>
-            <li>@fury - ...</li>
-            <li>@tstark - @stark Ever heard of space heaters?</li>
+            {% for chirp in chirps %}
+            <li>@{{ chirp.name }} - {{ chirp.chirp }}</li>
+            {% endfor %}
         </ul>
+        {% else %}
+        <p>Sorry, We gots no chirps</p>
+        {% endif %}
     </div>
 {% endblock %}
