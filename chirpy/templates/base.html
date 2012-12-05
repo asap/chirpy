@@ -1,17 +1,26 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
-<html lang="en">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    {% block head %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/chirpy.css') }}" />
-    <title>{% block title %}{% endblock %} - Chirpy</title>
-    {% endblock %}
+{% extends 'bootstrap_responsive.html' %}
+
+{%- block title %} - Chirpy{% endblock -%}
+
+{% block style %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/chirpy.css') }}" />
+{% endblock %}
+
 </head>
-<body>
+
+{% block body_content %}
+    <nav>
+        <ul class="nav nav-tabs">
+            <li><a href="{{ url_for('index')}}">da chirps</a></li>
+            <li><a href="{{ url_for('add')}}">chirp chirp</a></li>
+        </ul>
+    </nav>
     <div id="content">{% block content %}{% endblock %}</div>
     <div id="footer">
         {% block footer %}
         &copy; Copyright 2012 by <a href="http://pic.twitter.com/ZpvapDAB">The Data Nerds</a>.
         {% endblock %}
     </div>
-</body>
+
+{% endblock -%}
