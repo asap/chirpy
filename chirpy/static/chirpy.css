@@ -1,5 +1,29 @@
 /* Create a chirps form */
 
+#container{
+	width:580px;
+	margin:0 auto;
+	padding:20px;
+	border:1px;
+	position:relative;
+}
+
+textarea{
+	width:350px;
+	height:200px;
+}
+
+button{
+	-moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+    color:#ffffff;
+    background:#0a768c;
+    margin-top:5px;
+    margin-right:5px;
+}
+
+
 /*List of Chirps */
 
 #wrapper{
